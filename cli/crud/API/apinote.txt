@@ -1,0 +1,203 @@
+												-:What is Api:-
+												==============
+Api stand for application programiing interface.
+Api is a machanism by using which one typ applicationcan communicate ith another application.
+in general Api is very  big topic.
+Api are used different applicationt to data from one plateform to another plateform worldmeter.com corona virus Api.
+Any application A,b,c can utilise the api of worldmeter.com to get live update of corona.
+
+1.interOperability: Conversion  of one tye of language to some common language so data can be exchanged without 
+directly converting the one language to another language .
+interOperability refer to sharing of ,data from one application to another application without changing native language
+,by means of some common interconversion language.
+
+or
+Sharing of data from one to another app without directly converting the native language is called interOperability.
+for exam:-
+Android ----->Json------>Java
+python-------->Json------>Java
+python-------->Json------>PHP
+php---------->Json------>SQL
+
+main feature of interOperability is plateform independent Nature.
+php---(serializtion /Json Encoding  )------>Json--->(Deserializtion/Json Decode)->SQL
+serializtion/Json Encoding:converting one type pl.to Json object
+Deserializtion/Json Decode :converting Json type to one type of Data-type of pl.
+
+Exam:-
+php---json_encode()--->json (serializtion)
+Associative Array ----->json
+
+
+
+Json ---->json_dencode ()------>Associative Array .(De-serializtion)
+
+
+what is web-service.
+====================
+Any type of service  acccess over the internet is termed as Web -service ,it can be any type  of service and 
+can used any protocal.
+
+what is web-Api.
+========================
+The api which can be access only via web interface or internet as   medium as  clled as Web-Api .
+java Application -----------> oracl local db 
+				localDrive Api
+Game application----------> Sound Driver
+				Audio Api
+Every Web-Api is Api but not every Api is web-Api.
+what is Soap.
+========================
+it is type of Web-Api which can be used , transport Data/represent the data ,in form SimpleObject Access protocal which
+used XML DATA representation .
+Eg:
+====
+<xml:nmps="version /xml-docment-4">
+		<xml:Envelope>
+			<Employee>
+					<user id ="1">
+						<email>riyaa$gmail.com</email>
+						<password>11234</password>
+					</user>
+				</employee>
+			</Envelope>
+		</xml>
+use for every heavy data transmission.		
+soap is highly scalable
+soap is secure ,why because yuo have access nth node for access real data node.
+soap Architecher ca very very deep that itcan be very complax to handle.
+what is RESET.
+===============
+Stand for representation state tranfer ,
+it is type of Web-Api which work under http protocal it representation is always ,in json format 
+it will very very light-weight ,
+Easy to handle ,due to organised data structer in form of key and value paiers.
+
+REST Api work on the bassis HTTP method:-
+*******************************************
+REQUEST:GET
+REQUEST:POST
+REQUEST:OPTION
+REQUEST:PATCH
+REQUEST:PUT 
+REQUEST:DELETE
+REQUEST:LOCK
+REQUEST:HEAD
+{
+"type":"GET",
+"version":"1..0.1",
+"status":"true";
+"error":false;
+"code":200,
+"data":[
+{"emp":1001,"name":"riyaa","salary":10000},
+{"emp":1002,"name":"priya","salary":30000},
+{"emp":1003,"name":"ritu","salary":50000},
+
+],
+"keywords",[],
+}
+
+what is postman:-
+=================
+		Postman is a client  tool to sent the pure http  request to the server.and testing Api's.
+		post man has set of http method to intersept the REST Api, by using GET,POST PATCH DELETE...etc. and also has
+		different payloads which can e binded as header ,and body content .
+
+
+what is different b/w RESET & soap:-
+====================================
+1.  Rest:representational state transfer
+1.	Soap:simple object access protocal
+
+2.	Rest:useslower bandwidth
+2.	Soap:uses higher bandwidth
+
+3.	Rest:it follows wb-standerds releted http protocal.
+3.	Soap:its follows xml structuer and convetion, based on envelope and web standerds.
+
+4.	Rest:lower sequrity
+4.	Soap:higher sequrity
+
+5.	Rest:easy to handle ,easy to deseriable and seriable .
+5.	Soap:very defuclt to handle ,
+
+6.	Rest:data reperastion is in jason ,yml.
+6.	Soap:data reperastion is in xml.
+
+
+Api Related Terms:-
+=====================
+				1.http method:these are set of method which re defind to perfom some unique opration
+					In Rest Api
+					http  method are equivalent DB opration
+					
+					C:creta the data Http/1.1 POST
+					R:read the data HTTP/1.1 GET
+					U:Update the data HTTP/1.1 PUT and PATCH 
+						put :full update
+						PATCH:partial update
+					D:Delete the data HTTP/1.1 Delete
+					HTTP has two version 1.1 and 2.1
+					
+					
+				header: are type of payload (informaton )attached to request before data.
+					header can contain informaton like:http satus :200,or 404,500
+					header has contain informaton like:contain -type :text/html contin -type:application /json,contain 
+					-type:image/jpeg all these are called mime types.
+					header has allowed method :get,post,....
+					header  can be used to check if request are authentic or not
+					header can be used to enable cors policy (contain origin request sequrity policy)
+					
+	Body content:
+	==============
+			it refer to form data ,supplied from form , or any client like postman 
+				tyype od body data 
+				1.formdata:form
+				2.urlencoded data
+				3.www -encode data
+				4.raw data:json
+					
+	how to make a Api :-
+======================	
+Array
+(
+    [DOCUMENT_ROOT] => C:\laragon\www\cli\crud\API
+    [REMOTE_ADDR] => ::1
+    [REMOTE_PORT] => 56328
+    [SERVER_SOFTWARE] => PHP 7.4.19 Development Server
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [SERVER_NAME] => localhost
+    [SERVER_PORT] => 7000
+    [REQUEST_URI] => /API.php
+    [REQUEST_METHOD] => GET
+    [SCRIPT_NAME] => /API.php
+    [SCRIPT_FILENAME] => C:\laragon\www\cli\crud\API\API.php
+    [PHP_SELF] => /API.php
+    [HTTP_HOST] => localhost:7000
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [HTTP_SEC_CH_UA] => " Not A;Brand";v="99", "Chromium";v="98", "Google Chrome";v="98"
+    [HTTP_SEC_CH_UA_MOBILE] => ?0
+    [HTTP_SEC_CH_UA_PLATFORM] => "Windows"
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+    [HTTP_SEC_FETCH_SITE] => none
+    [HTTP_SEC_FETCH_MODE] => navigate
+    [HTTP_SEC_FETCH_USER] => ?1
+    [HTTP_SEC_FETCH_DEST] => document
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate, br
+    [HTTP_ACCEPT_LANGUAGE] => en-US,en;q=0.9
+    [REQUEST_TIME_FLOAT] => 1644037050.1261
+    [REQUEST_TIME] => 1644037050
+)
+					
+Ques :what is jwt
+ ans:json web token
+Ques:what is use token?
+ans:for authentication.
+Ques:why is by default time of jwt?
+ ans:20 minute.  
+					
+ 

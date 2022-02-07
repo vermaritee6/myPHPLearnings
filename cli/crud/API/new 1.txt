@@ -1,0 +1,81 @@
+function process_post(){
+
+gobal $resourse;
+      $query = new query();
+	  try{
+		 if($query->insert($resourse,$formdata)){
+			 $id =$query->getId();
+			$response =array(
+			
+			'code'=>200,
+			'status'=>true,
+			'message'=>'record inserted successfully.',
+			'error'=>false,
+			'data'=>[
+			'id'=$id],
+			);
+	  }
+	  else{
+		  throw new exception();
+
+	  }  
+	  }
+	  catch($exception $e){
+		  		  $response =array(
+			
+			'code'=>201,
+			'status'=>false,
+			'message'=>'Cannot inserted Record.',
+			'error'=>$e->getMassege(),
+			'data'=>[]
+			);
+	  }
+	 
+	 header("Content-type:applcaion/JSON");
+http-response_code(200);
+echo json_decode($response,JSON_PRETTY_PRINT);
+exit();	 
+
+
+}
+
+
+function process_put($id){
+		gobal $resourse;
+      $query = new query();
+	  try{
+		 if($query->update($resourse,$formdata)->where('id',$id)->commit()){
+			$response =array(
+			
+			'code'=>200,
+			'status'=>true,
+			'message'=>'record updated successfully.',
+			'error'=>false,
+			'data'=>[
+			'id'=$id,
+			'name'=>$formdata['name'],
+			'email'=>$formdata['email']
+			],
+			);
+	  }
+	  else{
+		  throw new exception();
+
+	  }  
+	  }
+	  catch(){
+		  		  $response =array(
+			
+			'code'=>201,
+			'status'=>false,
+			'message'=>'record not updated .',
+			'error'=>$e->getMassege(),
+			'data'=>[]
+			);
+	  }
+	 
+	 header("Content-type:applcaion/JSON");
+http-response_code(200);
+echo json_decode($response,JSON_PRETTY_PRINT);
+exit();	 
+}
